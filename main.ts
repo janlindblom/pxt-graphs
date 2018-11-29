@@ -7,7 +7,7 @@ namespace graphs {
 
     //% block
     //% blockId=graphs_bar_graph_horisontal
-    //% block="bar|graph|horisontal|value %value|up|to %upTo|row %row"
+    //% block="plot|horisontal|bar|graph|of %value|up|to %upTo|on|row %row"
     //% row.min=0 row.max=4
     export function barGraphHorisontal(value: number, upTo: number, row: number): void {
         let mappedMax = Math.round(Math.map(value, 0, upTo, 0, 4))
@@ -23,7 +23,7 @@ namespace graphs {
 
     //% block
     //% blockId=graphs_bar_graph_vertical
-    //% block="bar|graph|vertical|value %value|up|to %upTo|column %column"
+    //% block="plot|vertical|bar|graph|of %value|up|to %upTo|on|column %column"
     //% column.min=0 column.max=4
     export function barGraphVertical(value: number, upTo: number, column: number): void {
         let mappedMax = Math.round(Math.map(value, 0, upTo, 0, 4))
