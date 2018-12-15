@@ -12,7 +12,7 @@ namespace led {
     //% block="plot|horisontal|bar|graph|of %value|up|to %upTo|on|row %row"
     //% row.min=0 row.max=4 advanced=true
     //% parts="ledmatrix"
-    //% icon="\uf080" blockExternalInputs=true
+    //% icon="\uf080"
     export function plotSingleBarHorisontal(value: number, upTo: number, row: number): void {
         value = Math.abs(value)
         let mappedMax = Math.round(Math.map(value, 0, upTo, 0, 4))
@@ -34,7 +34,7 @@ namespace led {
     //% block="plot|vertical|bar|graph|of %value|up|to %upTo|on|column %column"
     //% column.min=0 column.max=4 advanced=true
     //% parts="ledmatrix"
-    //% icon="\uf080" blockExternalInputs=true
+    //% icon="\uf080"
     export function plotSingleBarVertical(value: number, upTo: number, column: number): void {
         value = Math.abs(value)
         let mappedMax = Math.round(Math.map(value, 0, upTo, 0, 4))
