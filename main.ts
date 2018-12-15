@@ -4,11 +4,14 @@
 //% groups=['LED matrix']
 namespace led {
 
+    /**
+     * Plot a value as a horisontal bar using a single row of LEDs.
+     */
     //% block
-    //% blockId=graphs_bar_graph_horisontal
+    //% blockId=led_graphs_bar_graph_horisontal
     //% block="plot|horisontal|bar|graph|of %value|up|to %upTo|on|row %row"
     //% row.min=0 row.max=4 advanced=true
-    export function plotSingleBarGraphHorisontal(value: number, upTo: number, row: number): void {
+    export function plotSingleBarHorisontal(value: number, upTo: number, row: number): void {
         let mappedMax = Math.round(Math.map(value, 0, upTo, 0, 4))
         for (let x = 0; x <= mappedMax; x++) {
             led.plot(x, row)
@@ -20,11 +23,14 @@ namespace led {
         }
     }
 
+    /**
+     * Plot a value as a vertical bar using a single column of LEDs.
+     */
     //% block
-    //% blockId=graphs_bar_graph_vertical
+    //% blockId=led_graphs_bar_graph_vertical
     //% block="plot|vertical|bar|graph|of %value|up|to %upTo|on|column %column"
     //% column.min=0 column.max=4 advanced=true
-    export function plotSingleBarGraphVertical(value: number, upTo: number, column: number): void {
+    export function plotSingleBarVertical(value: number, upTo: number, column: number): void {
         let mappedMax = Math.round(Math.map(value, 0, upTo, 0, 4))
         for (let y = 0; y <= mappedMax; y++) {
             led.plot(column, 4 - y)
