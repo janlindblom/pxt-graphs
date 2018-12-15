@@ -5,15 +5,15 @@
 namespace led {
 
     /**
-     * Plot a value as a horisontal bar using a single row of LEDs.
+     * Plot a value as a horizontal bar using a single row of LEDs.
      */
     //% block
-    //% blockId=led_graphs_bar_graph_horisontal
-    //% block="plot|horisontal|bar|graph|of %value|up|to %upTo|on|row %row"
+    //% blockId=led_graphs_bar_graph_horizontal
+    //% block="plot|horizontal|bar|graph|of %value|up|to %upTo|on|row %row"
     //% row.min=0 row.max=4 advanced=true
     //% parts="ledmatrix"
     //% icon="\uf080"
-    export function plotSingleBarHorisontal(value: number, upTo: number, row: number): void {
+    export function plotSingleBarHorizontal(value: number, upTo: number, row: number): void {
         value = Math.abs(value)
         let mappedMax = Math.round(Math.map(value, 0, upTo, 0, 4))
         for (let x = 0; x <= mappedMax; x++) {
